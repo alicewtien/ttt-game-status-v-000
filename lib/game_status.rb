@@ -35,7 +35,7 @@ end
 #winner
 def winner(board)
   WIN_COMBINATIONS.each { |combo| }
-  if won?(board) && combo == ["X", "X", "X"]
+  if won?(board) && board[combo[0]] == "X"
     return "X"
   elsif won?(board) && combo == ["O", "O", "O"]
     return "O"
