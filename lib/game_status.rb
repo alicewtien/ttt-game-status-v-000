@@ -34,9 +34,10 @@ def over?(board)
 end
 #winner
 def winner(board)
-  if won?(board) && WIN_COMBINATIONS[combo] == ["X", "X", "X"]
+  WIN_COMBINATIONS.each { |combo| }
+  if won?(board) && combo == ["X", "X", "X"]
     return "X"
-  elsif won?(board) && WIN_COMBINATIONS[combo] == ["O", "O", "O"]
+  elsif won?(board) && combo == ["O", "O", "O"]
     return "O"
   else
     return nil
