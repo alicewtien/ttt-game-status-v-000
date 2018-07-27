@@ -34,13 +34,11 @@ def over?(board)
 end
 #winner
 def winner(board)
-  WIN_COMBINATIONS.each do |combo|
-    if won?(board) && board[combo[0]] == "X"
-      return "X"
-    elsif won?(board) && board[combo[0]] == "O"
-      return "O"
-    else
-      return nil
-    end
+  if won?(board) && board[combo[0]] == "X"
+    return "X"
+  elsif won?(board) && board[combo[0]] == "O"
+    return "O"
+  else
+    return nil
   end
 end
