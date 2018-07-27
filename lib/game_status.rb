@@ -36,7 +36,7 @@ end
 def winner(board)
   WIN_COMBINATIONS.each do |combo|
     if won?(board)
-      return board[combo[2]]
+      return WIN_COMBINATIONS[combo[0]]
     else
       return nil
     end
