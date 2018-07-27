@@ -34,9 +34,9 @@ def over?(board)
 end
 #winner
 def winner(board)
-  if won?(board) && WIN_COMBINATIONS[] == ["X", "X", "X"]
+  if won?(board) && WIN_COMBINATIONS[combo] == ["X", "X", "X"]
     return "X"
-  elsif won?(board) && WIN_COMBINATIONS[] == ["O", "O", "O"]
+  elsif won?(board) && WIN_COMBINATIONS[combo] == ["O", "O", "O"]
     return "O"
   else
     return nil
