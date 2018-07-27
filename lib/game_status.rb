@@ -37,10 +37,6 @@ def winner(board)
   WIN_COMBINATIONS.each do |combo|
     if won?(board) && combo[0] == "O"
       return "O"
-    elsif !won?(board)
-      return nil
-    else
-      return "X"
     end
   end
 end
